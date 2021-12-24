@@ -551,7 +551,7 @@ catch (err) {
                                 <Table bordered responsive className="mt-3">
                                     <thead>
                                         <tr>
-                                        <th>Your Slate</th>
+                                        <th><center>Your Slate</center></th>
 
                                         </tr>
                                     </thead>
@@ -571,7 +571,9 @@ catch (err) {
                                         <Col xl="12" md="12">
                                       
                                             <InputGroup className="mt-3">
-                                                
+                                            <label>
+                                           Enter amount &nbsp;&nbsp;&nbsp;
+                                          </label>
                                             <Input placeholder={0} style={{ height: "auto" }}type = "number"  />
                                                
                                             </InputGroup>
@@ -618,7 +620,7 @@ catch (err) {
                                 <Table bordered responsive className="mt-3">
                                     <thead>
                                         <tr>
-                                            <th>Your Slate</th>
+                                        <th><center>Your Slate</center></th>
                                          
                                                 
                                                 
@@ -645,6 +647,9 @@ catch (err) {
                                       <> 
 
                                         <InputGroup className="mt-3">
+                                        <label>
+                                           Enter amount &nbsp;&nbsp;&nbsp;
+                                          </label>
                                                 <Input placeholder={unstakeamount} style={{ height: "auto" }}type = "number" id="tid2"  />
                                                 {/* <InputGroupAddon addonType="append"><Button color="site-primary" onClick={Buy}>Buy</Button></InputGroupAddon> */}
                                             </InputGroup>
