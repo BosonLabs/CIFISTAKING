@@ -8,8 +8,10 @@ import web3 from "../web3";
 import Popup from "../Popup";
 import Modald from "../ModalD";
 import FolowStepsd from "../FolowStepsd";
+import FolowStepPro from '../FolowStepPro';
 import BigNumber from "bignumber.js";
 import FolowStepsdcopy from "../FolowStepsdcopy";
+import ModalDCopy from '../ModalDCopy';
 const algosdk = require('algosdk');
 const algodClient = new algosdk.Algodv2('', 'https://api.testnet.algoexplorer.io', '');
 const myAlgoConnect = new MyAlgoConnect();
@@ -34,9 +36,11 @@ const Buyslate = () => {
     const [isOpens, setIsOpens] = useState(false);
     var[dis,setDis] = useState("");
     const [isOpennew, setIsOpennew] = useState(false);
+    const [isOpennewpro, setIsOpennewpro] = useState(false);
     const[balance,setBalance] = useState([]);
     const[stakedbalance,setStakedBalance] = useState([]);
     const[rewardamountbalance,setrewardBalance] = useState([]);
+    const[datasendhere,datasethere] = useState("");
     let assetid = 53453651;
     let applicationid = 46315128;
 
@@ -155,6 +159,8 @@ let client = new algosdk.Algodv2(algodToken, algodServer, algodPort);
 
 
 const assetoptin = async() => {
+  try{
+setIsOpennewpro(true)
 const algosdk = require('algosdk');
 const algodclient = new algosdk.Algodv2('', 'https://api.testnet.algoexplorer.io/', '');
 const myAlgoConnect = new MyAlgoConnect();
@@ -171,8 +177,15 @@ const assetoptin1 = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
   const signedTxnass = await myAlgoConnect.signTransaction(assetoptin1.toByte());
   const responseass = await algodClient.sendRawTransaction(signedTxnass.blob).do();
   console.log("optresponse",responseass)
+  datasethere("Asset Opt-in successfull")
+  setIsOpennewpro(false)
   setIsOpennew(true)
   //alert("Asset Opt-in successfull")
+}
+catch (err) {
+    console.error(err);
+    setIsOpennewpro(false)
+}
 }
 
 
@@ -187,10 +200,9 @@ const assetoptin1 = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
  //unstake
 
 const Buy = async() => {
-
+try{
+  setIsOpennewpro(true)
   const algodClient = new algosdk.Algodv2('', 'https://api.testnet.algoexplorer.io', '');
-
-
   let appId1 = 46315308;
   let appId2 = 46315128;
   var amt = document.getElementById("tid2").value; 
@@ -314,10 +326,17 @@ const groupID = algosdk.computeGroupID([transaction1, transaction2]);
   console.log("TxID", JSON.stringify(response, null, 1));
   await waitForConfirmation(algodClient, response.txId);
   //alert("Buy Successfully");
+  datasethere("Buy Successfully")
+  setIsOpennewpro(false)
   setIsOpennew(true)
 }
 catch (err) {
     console.error(err);
+}
+}
+catch (err) {
+    console.error(err);
+    setIsOpennewpro(false)
 }
 
 }
@@ -494,7 +513,7 @@ const groupID = algosdk.computeGroupID([ transaction1, transaction2, transaction
   const response = await algodClient.sendRawTransaction([ signedTx1.blob, signedTx2.blob, signedTx3.blob, signedTx4.blob,signedTx5.blob]).do();
   console.log("TxID", JSON.stringify(response, null, 1));
   await waitForConfirmation(algodClient, response.txId);
-  alert(" Reward Claimed Successfully");
+  //alert(" Reward Claimed Successfully");
 }
 catch (err) {
     console.error(err);
@@ -672,8 +691,12 @@ catch (err) {
  </Container>
 
  <Modald visible={isOpennew} onClose={() => setIsOpennew(false)}>
-        <FolowStepsd viewhistory={dis}  />
+        <FolowStepsd viewhistory={dis} data={datasendhere} />
   </Modald>
+
+  <ModalDCopy visible={isOpennewpro} >
+        <FolowStepPro />
+  </ModalDCopy>
        
           </>
         }

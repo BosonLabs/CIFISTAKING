@@ -83,7 +83,7 @@ const Header = (props) => {
 
     return (<>
        <Modald visible={isOpen} onClose={() => setIsOpen(false)}>
-        <FolowStepsd viewhistory={dis}  />
+        <FolowStepsdConnect viewhistory={dis}  />
       </Modald>
         <div className="header bg-site-secondary ">
             <Container fluid className="px-md-5">
