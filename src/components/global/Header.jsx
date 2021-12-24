@@ -92,7 +92,7 @@ const Header = (props) => {
                    
                     <h5 className="m-0" id="header-title"></h5>
                     <div className="ml-auto topbar-btns">
-                      <Button color="outline-site-primary" onClick={Connectalgosigner}>Algorand </Button>
+                      <Button color="outline-site-primary" >Algorand </Button>
                         {
                             localStorage.getItem("wallet")===null || localStorage.getItem("wallet")==="" ||localStorage.getItem("wallet")==='undefined' ||localStorage.getItem("wallet")===undefined ?  
                             (<Button color="site-primary" className="ml-4"onClick={Connectwallet}>CONNECT WALLET</Button>):(
