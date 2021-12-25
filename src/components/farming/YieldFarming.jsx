@@ -175,13 +175,13 @@ for (let n = 0; n < accountInfoResponse2['apps-local-state'][i][`key-value`].len
     <>
       <Row className="m-3 m-md-5">
         <Col xl="4" lg="8" xs="12" className="mb-4">
-          <CustomCard title="TOTAL VALUE LOCKED" text={parseInt(totalstake/1000000)}  subText="SLATE" />
+          <CustomCard title="TOTAL VALUE LOCKED" text={parseInt(totalstake/1000000)}  subText="CIFI" />
         </Col>
         <Col xl="4" lg="8" xs="12" className="mb-4">
-          <CustomCard title="SLATE REWARDS" text={parseInt(totalreward/1000000)} subText={parseInt(totalrewardallocated/1000000)} />
+          <CustomCard title="CIFI REWARDS" text={parseInt(totalreward/1000000)} subText={parseInt(totalrewardallocated/1000000)} />
         </Col>
         <Col xl="4" lg="8" xs="12" className="mb-4">
-          <CustomCard title="SLATE PRICE" text={price}  />
+          <CustomCard title="CIFI PRICE" text={price}  />
         </Col>
         {/* <Col xl="4" lg="8" xs="12" className="mb-4">
           <CustomCard title="SLATE PRICE" text={0} subText="Uniswap market" />

@@ -55,7 +55,7 @@ const Sidebar = (props) => {
                 </Link>
                 <Link to="/Buy-slate" className={`theme-nav-item ${history.location.pathname == "/Buy-slate" ? "active" : ""}`}>
                    <i className="fa fa-wallet"></i>
-                    <span className="ml-3">BUY SLATE</span>
+                    <span className="ml-3">BUY CIFI</span>
                 </Link>
                
                 <hr/>
