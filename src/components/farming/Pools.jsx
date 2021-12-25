@@ -337,7 +337,7 @@ const stakepools = async() => {
                   src={icon}
                   alt="Card image cap"
               />
-             {}
+             {parseInt(totalstake/1000000)}
           </p>
       </div>
   </div>
