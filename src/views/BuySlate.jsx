@@ -546,12 +546,12 @@ catch (err) {
                     <Col xl="8" lg="8" md="10" sm="12">
                         <Card className="custom-card">
                             <div className="p-3">
-                            <h4>Buy Slate </h4>
+                            <h4>Buy CIFI </h4>
                                 
                                 <Table bordered responsive className="mt-3">
                                     <thead>
                                         <tr>
-                                        <th><center>Your Slate</center></th>
+                                        <th><center>Your CIFI</center></th>
 
                                         </tr>
                                     </thead>
@@ -615,12 +615,12 @@ catch (err) {
                     <Col xl="8" lg="8" md="10" sm="12">
                         <Card className="custom-card">
                             <div className="p-3">
-                                <h4>Buy  Slate </h4>
-                                <h6>NOTE : This Slate Token Is Only for Testing Purpose</h6>
+                                <h4>Buy  CIFI </h4>
+                                <h6>NOTE : This CIFI Token Is Only for Testing Purpose</h6>
                                 <Table bordered responsive className="mt-3">
                                     <thead>
                                         <tr>
-                                        <th><center>Your Slate</center></th>
+                                        <th><center>Your CIFI</center></th>
                                          
                                                 
                                                 

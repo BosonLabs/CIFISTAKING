@@ -1242,15 +1242,15 @@ catch (err) {
                     <Col xl="8" lg="8" md="10" sm="12">
                         <Card className="custom-card">
                             <div className="p-3">
-                                <h4>Stake  Slate </h4>
-                                <h6>The Stake Slate And Get Slate Token As Reward</h6>
+                                <h4>Stake  Cifi </h4>
+                                <h6>The Stake Cifi And Get Cifi Token As Reward</h6>
                                 <Table bordered responsive className="mt-3">
                                     <thead>
                                         <tr>
-                                            <th>Your Slate</th>
-                                            <th>Staked Slate</th>
+                                            <th>Your CifI</th>
+                                            <th>Staked Cifi</th>
                                            
-                                            <th>Slate Reward</th>
+                                            <th>Cifi Reward</th>
                                            
                                                 
                                                 

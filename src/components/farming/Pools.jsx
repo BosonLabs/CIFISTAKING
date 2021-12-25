@@ -210,7 +210,7 @@ const stakepools = async() => {
           }}
       >
           <p style={{ fontWeight: "600", margin: "auto" }}>
-              Slate
+              Cifi
           </p>
       </div>
   </div>
@@ -295,7 +295,7 @@ const stakepools = async() => {
               style={{ fontWeight: "600", fontSize: "12px" }}
               className="text-muted"
           >
-              Slate rewards left
+              Cifi rewards left
           </p>
       </div>
       {/* <small className="text-site-primary font-weight-semi-bold text-uppercase">bond staked</small> */}
@@ -377,7 +377,7 @@ const stakepools = async() => {
           }}
       >
           <p style={{ fontWeight: "600", margin: "auto" }}>
-              Slate
+              Cifi
           </p>
       </div>
   </div>
@@ -462,7 +462,7 @@ const stakepools = async() => {
               style={{ fontWeight: "600", fontSize: "12px" }}
               className="text-muted"
           >
-              Slate rewards left
+              Cifi rewards left
           </p>
       </div>
       {/* <small className="text-site-primary font-weight-semi-bold text-uppercase">bond staked</small> */}
