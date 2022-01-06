@@ -184,7 +184,7 @@ const params = await algodclient.getTransactionParams().do();
 const assetoptin1 = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
 from: localStorage.getItem('wallet'),
 to: localStorage.getItem('wallet'),
-assetIndex: 53453651,
+assetIndex: parseInt(configfile.assetid),
 note: undefined,
 amount: 0,
 suggestedParams: params
